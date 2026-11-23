@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gender & Plural Gym · Russian nouns A1–A2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=Golos+Text:wght@400..900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#fffaf7; --surface:#fff; --ink:#0d0d0d; --muted:#4d4a4b;
+  --pink:#fe98c0; --green:#80eb3d; --blue:#3dd0eb; --red:#eb583d;
+  --yellow:#ffe14d; --lilac:#c4a5ff;
+  --border:3px solid var(--ink); --radius:18px;
+  --shadow:6px 6px 0 var(--ink); --shadow-sm:4px 4px 0 var(--ink); --shadow-lg:9px 9px 0 var(--ink);
+  --font-display:"Bricolage Grotesque","Golos Text","Arial Black",system-ui,sans-serif;
+  --font-ru:"Golos Text",system-ui,sans-serif;
+  --font-body:"DM Sans","Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1120px; color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.05rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+::selection{background:var(--pink)}
+a{color:inherit}
+button,select{font:inherit;color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 16px}
+.muted{color:var(--muted)}
+.ru{font-family:var(--font-ru)}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border:var(--border);border-radius:999px;background:var(--pink);font-family:var(--font-display);font-size:1rem;font-weight:800;text-decoration:none;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow)}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+.btn--ghost{background:var(--surface)} .btn--green{background:var(--green)} .btn--blue{background:var(--blue)} .btn--red{background:var(--red)} .btn--yellow{background:var(--yellow)}
+.btn--sm{padding:6px 14px;font-size:.9rem;box-shadow:3px 3px 0 var(--ink)}
+.btn:focus-visible,.nav__link:focus-visible,.tile:focus-visible,.choice:focus-visible{outline:3px dashed var(--ink);outline-offset:4px}
+.icon-btn{border:2px solid var(--ink);border-radius:999px;background:var(--surface);width:38px;height:38px;display:inline-grid;place-items:center;cursor:pointer;font-size:1rem;box-shadow:2px 2px 0 var(--ink)}
+
+.header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:var(--border)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;gap:10px 18px;min-height:68px;padding-block:10px;flex-wrap:wrap}
+.brand{padding:4px 12px;border:var(--border);border-radius:10px;background:var(--green);box-shadow:var(--shadow-sm);font-family:var(--font-display);font-size:1.15rem;font-weight:800;letter-spacing:-.02em;text-decoration:none;transform:rotate(-2deg);white-space:nowrap}
+.nav{display:flex;flex-wrap:wrap;gap:4px}
+.nav__link{padding:5px 11px;border:2px solid transparent;border-radius:999px;font-weight:700;text-decoration:none;font-size:.93rem;transition:background .12s,border-color .12s}
+.nav__link:hover{background:var(--surface);border-color:var(--ink)}
+.nav__link.is-active{background:var(--ink);color:var(--bg)}
+.header__tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.seg{display:flex;border:var(--border);border-radius:999px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:none;padding:5px 12px;font-weight:800;font-family:var(--font-display);cursor:pointer}
+.seg button+button{border-left:2px solid var(--ink)}
+.seg button.is-on{background:var(--blue)}
+.topic-select{padding:6px 12px;border:var(--border);border-radius:999px;background:var(--surface);font-weight:700;cursor:pointer;max-width:200px}
+.xp{padding:5px 12px;border:var(--border);border-radius:999px;background:var(--pink);font-family:var(--font-display);font-weight:800;box-shadow:3px 3px 0 var(--ink);transform:rotate(3deg);white-space:nowrap}
+.xp.bump{animation:bump .4s}
+@keyframes bump{50%{transform:rotate(-4deg) scale(1.2)}}
+
+.marquee{display:flex;overflow:hidden;border-block:var(--border);background:var(--ink);color:var(--green);font-family:var(--font-ru);font-size:clamp(1.1rem,3vw,1.6rem);font-weight:800;white-space:nowrap;user-select:none}
+.marquee__track{display:flex;flex-shrink:0;align-items:center;gap:24px;padding:14px 12px;animation:marquee 45s linear infinite}
+.marquee__star{color:var(--pink)}
+@keyframes marquee{to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.marquee__track{animation:none}html{scroll-behavior:auto}}
+
+.section{padding:56px 0 72px}
+.heading{margin:0 0 12px;font-family:var(--font-display);font-size:clamp(2.4rem,7vw,4.5rem);font-weight:800;line-height:.95;letter-spacing:-.04em}
+.lead{margin:0 0 28px;font-size:1.15rem;font-weight:500;max-width:62ch}
+
+.hero-wrap{padding:48px 0 64px}
+.hero{display:flex;align-items:center;gap:56px;padding:40px;border:var(--border);border-radius:28px;background:var(--surface);box-shadow:var(--shadow-lg)}
+.hero__media{position:relative;flex-shrink:0}
+.hero__avatar{display:grid;place-items:center;width:240px;aspect-ratio:4/5;border:var(--border);border-radius:28px;background:linear-gradient(135deg,var(--green),var(--yellow));box-shadow:var(--shadow-lg);transform:rotate(-3deg);font-family:var(--font-ru);font-size:8.5rem;font-weight:900;line-height:1}
+.hero__sticker{position:absolute;right:-26px;bottom:-20px;padding:9px 16px;border:var(--border);border-radius:999px;background:var(--pink);box-shadow:var(--shadow-sm);font-family:var(--font-display);font-size:1.1rem;font-weight:800;white-space:nowrap;transform:rotate(8deg)}
+.hero__sticker2{position:absolute;left:-26px;top:-16px;padding:6px 14px;border:var(--border);border-radius:999px;background:var(--blue);box-shadow:var(--shadow-sm);font-family:var(--font-ru);font-weight:800;transform:rotate(-10deg);white-space:nowrap}
+.hero__chip{display:inline-block;padding:3px 10px;border:2px solid var(--ink);border-radius:8px;background:var(--pink);font-family:var(--font-display);font-weight:800;font-size:.85rem;box-shadow:3px 3px 0 var(--ink);transform:rotate(-2deg)}
+.hero__title{margin:14px 0 0;font-family:var(--font-display);font-size:clamp(5rem,17vw,11rem);font-weight:800;line-height:.8;letter-spacing:-.06em}
+.hero__lead{max-width:34ch;margin:22px 0 0;font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:700;line-height:1.3}
+.hero__stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{display:inline-block;padding:3px 13px;border:2px solid var(--ink);border-radius:999px;background:var(--blue);font-size:.92rem;font-weight:700}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.mode{display:flex;flex-direction:column;border:var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden;box-shadow:var(--shadow);text-decoration:none;transition:transform .15s,box-shadow .15s}
+.mode:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:var(--shadow-lg)}
+.mode__banner{display:flex;align-items:flex-end;justify-content:space-between;min-height:130px;padding:16px 20px;border-bottom:var(--border);background:var(--c)}
+.mode__emoji{font-size:2.6rem;line-height:1}
+.mode__num{font-family:var(--font-display);font-weight:800;font-size:.9rem;border:2px solid var(--ink);background:var(--surface);border-radius:999px;padding:1px 10px}
+.mode__body{padding:16px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.mode__title{margin:0;font-family:var(--font-display);font-size:1.75rem;font-weight:800;line-height:.95;letter-spacing:-.03em}
+.mode__sum{margin:0;font-weight:500;flex:1}
+.mode__go{font-family:var(--font-display);font-weight:800}
+
+/* topics strip on home */
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px;margin-bottom:56px}
+.topic{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border:var(--border);border-radius:16px;background:var(--c);box-shadow:var(--shadow-sm);cursor:pointer;text-align:left;transition:transform .12s,box-shadow .12s}
+.topic:hover{transform:translate(-2px,-2px) rotate(-1deg);box-shadow:var(--shadow)}
+.topic__e{font-size:1.8rem;line-height:1}
+.topic__ru{font-family:var(--font-ru);font-weight:900;font-size:1.25rem;margin-top:6px}
+.topic__en{font-weight:700;font-size:.9rem}
+
+/* gender legend */
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.g{display:inline-block;padding:1px 10px;border:2px solid var(--ink);border-radius:999px;font-weight:800;font-size:.8rem;background:var(--gc)}
+
+/* noun list */
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:18px}
+.search{flex:1 1 240px;padding:11px 18px;border:var(--border);border-radius:999px;font:inherit;font-weight:600;background:var(--surface);box-shadow:var(--shadow-sm);outline:none}
+.search:focus{background:#fffbe0}
+.ngrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px}
+.tile{position:relative;text-align:left;padding:14px 16px;border:var(--border);border-radius:16px;background:var(--surface);box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .12s,box-shadow .12s;display:flex;flex-direction:column;gap:3px}
+.tile:hover{transform:translate(-2px,-2px) rotate(-.6deg);box-shadow:var(--shadow);background:var(--gc)}
+.tile__e{font-size:2rem;line-height:1.1;min-height:2.2rem}
+.tile__ru{font-family:var(--font-ru);font-weight:800;font-size:1.35rem;line-height:1.1}
+.tile__en{font-weight:600;color:var(--muted);font-size:.92rem}
+.tile:hover .tile__en{color:var(--ink)}
+.tile__tags{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.tile__star{position:absolute;top:10px;right:12px}
+.groupsec{margin-bottom:44px}
+.grouphead{display:flex;align-items:center;gap:12px;margin:0 0 16px;font-family:var(--font-display);font-weight:800;font-size:1.8rem;letter-spacing:-.02em}
+.grouphead .ru{font-weight:900}
+.grouphead .badge{padding:2px 12px;border:var(--border);border-radius:12px;background:var(--c);box-shadow:3px 3px 0 var(--ink);transform:rotate(-2deg)}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:16px;background:rgba(13,13,13,.45)}
+.modal.is-open{display:grid}
+.modal__box{position:relative;width:min(540px,100%);max-height:92vh;overflow:auto;border:var(--border);border-radius:24px;background:var(--surface);box-shadow:var(--shadow-lg);animation:pop .22s ease}
+@keyframes pop{from{transform:scale(.9) rotate(-2deg);opacity:0}}
+.modal__close{position:absolute;top:14px;right:14px}
+.detail__head{padding:26px 28px 22px;border-bottom:var(--border);background:var(--gc)}
+.detail__e{font-size:3.4rem;line-height:1}
+.detail__ru{margin:8px 0 0;font-family:var(--font-ru);font-size:clamp(2.2rem,8vw,3.2rem);font-weight:900;line-height:1}
+.detail__en{margin:6px 0 0;font-weight:700;font-size:1.15rem}
+.detail__body{padding:22px 28px 28px;display:flex;flex-direction:column;gap:20px}
+.label{font-family:var(--font-display);font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fact{padding:10px 14px;border:2px solid var(--ink);border-radius:12px;background:var(--bg)}
+.fact b{display:block;font-family:var(--font-ru);font-size:1.25rem}
+.fact span{font-weight:700;color:var(--muted);font-size:.85rem}
+.example{padding:14px 16px;border:2px dashed var(--ink);border-radius:14px;background:#fffbe0}
+.example p{margin:0}
+.example .ru{font-weight:700;font-size:1.15rem}
+.note{padding:12px 16px;border:2px solid var(--ink);border-radius:14px;background:var(--lilac);font-weight:600}
+
+/* games */
+.game{max-width:760px;margin:0 auto}
+.game__bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+.progress{flex:1 1 200px;height:20px;border:var(--border);border-radius:999px;background:var(--surface);overflow:hidden}
+.progress__fill{height:100%;background:var(--green);border-right:3px solid var(--ink);transition:width .3s;width:0}
+.score{font-family:var(--font-display);font-weight:800;font-size:1.2rem;padding:4px 14px;border:var(--border);border-radius:999px;background:var(--yellow);box-shadow:3px 3px 0 var(--ink)}
+.stage{padding:32px;border:var(--border);border-radius:24px;background:var(--surface);box-shadow:var(--shadow-lg);text-align:center}
+.stage--pink{background:var(--pink)}
+.bigword{font-family:var(--font-ru);font-weight:900;font-size:clamp(2.4rem,9vw,3.8rem);line-height:1;margin:6px 0}
+.bigemoji{font-size:clamp(4rem,14vw,6rem);line-height:1.1}
+.gloss{font-weight:600;color:var(--muted);margin-bottom:20px}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.choices--4{grid-template-columns:repeat(4,1fr)}
+.choice{padding:16px 10px;border:var(--border);border-radius:16px;background:var(--bg);font-family:var(--font-ru);font-size:1.3rem;font-weight:800;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .1s;line-height:1.15}
+.choice small{display:block;font-family:var(--font-body);font-size:.75rem;font-weight:700;color:var(--muted);margin-top:4px}
+.choice:hover{transform:translate(-2px,-2px);background:var(--yellow)}
+.choice.ok{background:var(--green)} .choice.bad{background:var(--red);animation:shake .35s}
+.choice:disabled{cursor:default}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.feedback{min-height:1.8em;margin:16px 0 4px;font-weight:700;font-size:1.05rem}
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:16px}
+.toggle-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px}
+.answer{width:100%;max-width:380px;padding:14px 20px;border:var(--border);border-radius:16px;font-family:var(--font-ru);font-size:1.6rem;font-weight:800;text-align:center;outline:none;background:var(--bg)}
+.answer:focus{background:#fffbe0}
+.answer.ok{background:var(--green)} .answer.bad{background:var(--red);animation:shake .35s}
+.kbd{display:flex;flex-direction:column;gap:6px;align-items:center;margin-top:22px}
+.kbd__row{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}
+.key{min-width:36px;height:40px;padding:0 6px;border:2px solid var(--ink);border-radius:9px;background:var(--bg);font-family:var(--font-ru);font-weight:800;font-size:1.05rem;cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
+.key:active{transform:translate(2px,2px);box-shadow:none}
+.key--wide{min-width:70px;background:var(--pink)}
+.sentence{font-family:var(--font-ru);font-size:clamp(1.7rem,6vw,2.6rem);font-weight:900;line-height:1.25;margin:8px 0}
+.blank{display:inline-block;min-width:3.2em;border-bottom:4px solid var(--ink);line-height:1;color:transparent}
+.blank.filled{color:var(--ink);background:var(--green);border-radius:8px 8px 0 0;padding:0 8px}
+.odd{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.odd .choice{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 10px}
+.odd .choice .e{font-size:2.4rem;line-height:1}
+
+.flip{perspective:1200px;width:min(440px,100%);margin:0 auto;aspect-ratio:4/3;cursor:pointer}
+.flip__inner{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.3,1.4,.5,1);transform-style:preserve-3d}
+.flip.is-flipped .flip__inner{transform:rotateY(180deg)}
+.flip__face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;border:var(--border);border-radius:24px;box-shadow:var(--shadow-lg);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip__front{background:var(--gc,var(--pink))}
+.flip__back{background:var(--surface);transform:rotateY(180deg)}
+.flip__big{font-family:var(--font-ru);font-weight:900;font-size:clamp(2.2rem,8vw,3.4rem);line-height:1;text-align:center}
+.flip__hint{font-weight:700;font-size:.9rem;opacity:.7}
+.mini{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;font-family:var(--font-ru);font-weight:700}
+.mini span{padding:2px 10px;border:2px solid var(--ink);border-radius:999px;background:var(--bg);font-size:.95rem}
+
+.mem{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mcard{aspect-ratio:1/1;perspective:800px;cursor:pointer;border:0;background:none;padding:0}
+.mcard__inner{position:relative;width:100%;height:100%;transition:transform .4s;transform-style:preserve-3d}
+.mcard.up .mcard__inner{transform:rotateY(180deg)}
+.mcard__face{position:absolute;inset:0;display:grid;place-items:center;padding:6px;border:var(--border);border-radius:14px;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:var(--shadow-sm);font-weight:800;line-height:1.1;text-align:center;font-size:clamp(.85rem,2.8vw,1.2rem)}
+.mcard__back{background:var(--ink);color:var(--green);font-family:var(--font-display);font-size:2rem}
+.mcard__front{background:var(--surface);transform:rotateY(180deg);font-size:clamp(2rem,7vw,3rem)}
+.mcard__front.ru{font-family:var(--font-ru);background:var(--yellow);font-size:clamp(.85rem,2.8vw,1.2rem)}
+.mcard.done .mcard__front{background:var(--green)}
+.mcard.done{animation:bump .4s}
+
+.result__big{font-family:var(--font-display);font-weight:800;font-size:clamp(3.5rem,14vw,7rem);line-height:.9;letter-spacing:-.05em;margin:6px 0}
+.result__msg{font-family:var(--font-ru);font-weight:800;font-size:1.5rem;margin:6px 0 4px}
+.review{margin:18px auto 0;text-align:left;max-width:420px;display:flex;flex-direction:column;gap:6px}
+.review div{padding:6px 12px;border:2px solid var(--ink);border-radius:10px;background:var(--bg);font-family:var(--font-ru);font-weight:600}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px;text-align:left}
+.rule{padding:12px 14px;border:2px solid var(--ink);border-radius:14px;background:var(--gc);font-weight:600;font-size:.92rem}
+.rule b{display:block;font-family:var(--font-ru);font-size:1.2rem}
+
+.footer{border-top:var(--border);padding:28px 0;text-align:center;font-weight:600}
+.burst{position:fixed;z-index:99;pointer-events:none;font-size:1.6rem;font-weight:900;animation:fly 1.3s ease-out forwards}
+@keyframes fly{to{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
+
+@media (max-width:760px){
+  .hero{flex-direction:column;align-items:flex-start;gap:40px;padding:28px 22px}
+  .hero__avatar{width:180px;font-size:6rem}
+  .stage{padding:22px 16px}
+  .choices{grid-template-columns:1fr}
+  .choices--4{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:1fr}
+  .mem{gap:8px}
+  .nav{order:3;width:100%}
+}
+
+.brand{background:var(--pink)}
+.xp{background:var(--green)}
+.marquee{color:var(--pink)}
+.hero__avatar{background:linear-gradient(135deg,var(--blue),var(--pink),var(--green));font-size:3.4rem;text-align:center;line-height:1.05}
+.hero__title{font-size:clamp(3rem,9vw,6.2rem)}
+.gm{--gc:var(--blue)} .gf{--gc:var(--pink)} .gn{--gc:var(--green)} .gp{--gc:var(--yellow)}
+.subhead{font-family:var(--font-display);font-weight:800;font-size:clamp(1.8rem,4.5vw,2.6rem);letter-spacing:-.03em;margin:0 0 12px;line-height:1}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:40px}
+.gcard{padding:22px;border:var(--border);border-radius:22px;background:var(--gc);box-shadow:var(--shadow-lg)}
+.gcard:nth-child(1){transform:rotate(-1deg)} .gcard:nth-child(3){transform:rotate(1deg)}
+.gcard h3{margin:0;font-family:var(--font-ru);font-weight:900;font-size:2.6rem;line-height:1}
+.gcard .en{font-family:var(--font-display);font-weight:800;font-size:1.1rem;margin-bottom:12px}
+.end{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.end span{padding:2px 12px;border:2px solid var(--ink);border-radius:999px;background:var(--surface);font-family:var(--font-ru);font-weight:900;font-size:1.2rem}
+.ex{font-family:var(--font-ru);font-weight:700;margin:6px 0}
+.ex b{background:var(--surface);border-radius:4px;padding:0 3px;border:1.5px solid var(--ink)}
+.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:44px}
+.callout{padding:20px;border:var(--border);border-radius:20px;background:var(--gc,var(--surface));box-shadow:var(--shadow)}
+.callout h4{margin:0 0 8px;font-family:var(--font-display);font-weight:800;font-size:1.35rem}
+.callout p{margin:6px 0;font-weight:600}
+.callout .ru{font-weight:800}
+.softgrid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:44px}
+.softgrid>div{padding:18px;background:var(--gc)}
+.softgrid>div+div{border-left:var(--border)}
+.softgrid h4{margin:0 0 8px;font-family:var(--font-ru);font-weight:900;font-size:1.6rem}
+.softgrid ul{margin:0;padding-left:18px;font-weight:600}
+.softgrid li{margin:4px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chips span{padding:3px 12px;border:2px solid var(--ink);border-radius:999px;background:var(--surface);font-family:var(--font-ru);font-weight:800}
+.rulelist{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-bottom:44px}
+.prule{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;padding:18px;border:var(--border);border-radius:18px;background:var(--surface);box-shadow:var(--shadow-sm)}
+.prule__tag{min-width:92px;padding:6px 10px;border:var(--border);border-radius:14px;background:var(--gc);font-family:var(--font-ru);font-weight:900;font-size:1.2rem;text-align:center;line-height:1.1}
+.prule h4{margin:0 0 4px;font-family:var(--font-display);font-weight:800;font-size:1.15rem}
+.prule p{margin:0 0 6px;font-weight:600;font-size:.95rem}
+.prule .ex{font-size:1.05rem}
+.seven{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0}
+.seven span{width:54px;height:54px;display:grid;place-items:center;border:var(--border);border-radius:14px;background:var(--yellow);font-family:var(--font-ru);font-weight:900;font-size:1.8rem;box-shadow:3px 3px 0 var(--ink)}
+.seven span:nth-child(even){transform:rotate(4deg)} .seven span:nth-child(odd){transform:rotate(-4deg)}
+/* list */
+.ltable{overflow-x:auto;border:var(--border);border-radius:18px;background:var(--surface);box-shadow:var(--shadow);margin-bottom:36px}
+.ltable table{border-collapse:collapse;width:100%;min-width:600px}
+.ltable th,.ltable td{padding:9px 14px;border-bottom:2px solid var(--ink);text-align:left}
+.ltable tr:last-child td{border-bottom:0}
+.ltable th{background:var(--gc);font-family:var(--font-display)}
+.ltable td.ru{font-weight:800;font-size:1.1rem}
+.rtag{display:inline-block;padding:0 10px;border:2px solid var(--ink);border-radius:999px;font-weight:800;font-size:.8rem;background:var(--yellow);white-space:nowrap}
+/* shelf sort */
+.shelf{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;min-height:60px;margin:6px 0 22px}
+.chipw{padding:8px 14px;border:var(--border);border-radius:14px;background:var(--surface);font-family:var(--font-ru);font-weight:900;font-size:1.25rem;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.chipw.sel{background:var(--ink);color:var(--bg);transform:translate(-2px,-2px)}
+.chipw.bad{background:var(--red);animation:shake .35s}
+.bins{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.bin{min-height:170px;padding:12px;border:var(--border);border-radius:18px;background:var(--gc);box-shadow:var(--shadow-sm);cursor:pointer;display:flex;flex-direction:column;gap:6px;align-items:center}
+.bin h4{margin:0;font-family:var(--font-ru);font-weight:900;font-size:1.6rem}
+.bin small{font-weight:700}
+.bin .in{padding:2px 10px;border:2px solid var(--ink);border-radius:999px;background:var(--surface);font-family:var(--font-ru);font-weight:800;animation:pop .25s}
+.rush__time{font-family:var(--font-display);font-weight:800;font-size:3.2rem;line-height:1}
+.rush__card{margin:18px auto;padding:30px 20px;border:var(--border);border-radius:22px;background:var(--surface);box-shadow:var(--shadow);max-width:440px;transition:background .15s}
+.rush__card.flash-ok{background:var(--green)} .rush__card.flash-bad{background:var(--red)}
+.rulechoices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rulechoices .choice{font-size:1.05rem;padding:14px 8px}
+.mcard__front.ru{font-size:clamp(.95rem,3vw,1.3rem)}
+.mcard__front.sg{background:var(--blue)} .mcard__front.pl{background:var(--yellow)}
+@media (max-width:760px){.cols3,.softgrid{grid-template-columns:1fr}.softgrid>div+div{border-left:0;border-top:var(--border)}.bins{grid-template-columns:1fr 1fr}.rulechoices{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="#home">Gender &amp; Plural Gym ✦</a>
+    <nav class="nav" id="nav">
+      <a class="nav__link" href="#home">Home</a>
+      <a class="nav__link" href="#gender">Gender rules</a>
+      <a class="nav__link" href="#plural">Plural rules</a>
+      <a class="nav__link" href="#list">Noun list</a>
+      <a class="nav__link" href="#detective">Gender detective</a>
+      <a class="nav__link" href="#shelf">Sort it</a>
+      <a class="nav__link" href="#soft">-ь challenge</a>
+      <a class="nav__link" href="#make">Make plurals</a>
+      <a class="nav__link" href="#which">Which rule?</a>
+      <a class="nav__link" href="#onemany">One or many?</a>
+      <a class="nav__link" href="#memory">Memory</a>
+    </nav>
+    <div class="header__tools">
+      <div class="seg" id="levelSeg" role="group" aria-label="Level">
+        <button data-l="A1">A1</button><button data-l="A2">A2</button><button data-l="all">All</button>
+      </div>
+      <span class="xp" id="xp">★ 0 XP</span>
+    </div>
+  </div>
+</header>
+
+<main id="view"></main>
+
+<footer class="footer">
+  <div class="container">Boqkova Teach ✦ Gender &amp; Plural Gym · <span class="ru" id="footRu"></span></div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__box" role="dialog" aria-modal="true">
+    <button class="icon-btn modal__close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+/* ============ DATA ============
+ An apostrophe ' after a Cyrillic vowel = stress mark.
+ word | english | gender (m f n pl) | plural ('' = not usually used in the plural) | plural rule | level | emoji */
+const RAW = `
+стол|table|m|столы'|Y|A1|🍽️
+телефо'н|phone|m|телефо'ны|Y|A1|📱
+студе'нт|student|m|студе'нты|Y|A1|🧑‍🎓
+биле'т|ticket|m|биле'ты|Y|A1|🎫
+магази'н|shop|m|магази'ны|Y|A1|🛒
+самолёт|plane|m|самолёты|Y|A1|✈️
+сыр|cheese|m|сыры'|Y|A1|🧀
+па'па|dad|m|па'пы|Y|A1|👨
+мужчи'на|man|m|мужчи'ны|Y|A1|🧔
+банк|bank|m|ба'нки|I7|A1|🏦
+парк|park|m|па'рки|I7|A1|🎠
+уро'к|lesson|m|уро'ки|I7|A1|📝
+врач|doctor|m|врачи'|I7|A1|🩺
+каранда'ш|pencil|m|карандаши'|I7|A1|✏️
+де'душка|grandfather|m|де'душки|I7|A1|👴
+нож|knife|m|ножи'|I7|A2|🔪
+музе'й|museum|m|музе'и|IS|A1|🏛️
+дождь|rain|m|дожди'|IS|A1|🌧️
+трамва'й|tram|m|трамва'и|IS|A2|🚋
+слова'рь|dictionary|m|словари'|IS|A2|📖
+гость|guest|m|го'сти|IS|A2|🛎️
+рубль|rouble|m|рубли'|IS|A2|💰
+медве'дь|bear|m|медве'ди|IS|A2|🐻
+дя'дя|uncle|m|дя'ди|IS|A2|👨‍🦳
+янва'рь|January|m||-|A1|🗓️
+дом|house|m|дома'|MA|A1|🏠
+го'род|city|m|города'|MA|A1|🏙️
+по'езд|train|m|поезда'|MA|A1|🚆
+глаз|eye|m|глаза'|MA|A1|👁️
+ве'чер|evening|m|вечера'|MA|A1|🌆
+учи'тель|teacher|m|учителя'|MA|A1|🧑‍🏫
+лес|forest|m|леса'|MA|A2|🌲
+а'дрес|address|m|адреса'|MA|A2|📮
+па'спорт|passport|m|паспорта'|MA|A2|🛂
+день|day|m|дни|FL|A1|🌞
+оте'ц|father|m|отцы'|FL|A2|👨‍👧
+пода'рок|present, gift|m|пода'рки|FL|A2|🎁
+рот|mouth|m|рты|FL|A2|👄
+брат|brother|m|бра'тья|IR|A1|👦
+стул|chair|m|сту'лья|IR|A1|🪑
+друг|friend|m|друзья'|IR|A1|🤝
+челове'к|person|m|лю'ди|IR|A1|🧍
+ребёнок|child|m|де'ти|IR|A1|🧒
+цвето'к|flower|m|цветы'|IR|A1|🌸
+сын|son|m|сыновья'|IR|A2|👶
+муж|husband|m|мужья'|IR|A2|🤵
+сосе'д|neighbour|m|сосе'ди|IR|A2|🏘️
+ко'фе|coffee|m||-|A1|☕
+ма'ма|mum|f|ма'мы|Y|A1|👩
+ко'мната|room|f|ко'мнаты|Y|A1|🛋️
+маши'на|car|f|маши'ны|Y|A1|🚗
+шко'ла|school|f|шко'лы|Y|A1|🏫
+ры'ба|fish|f|ры'бы|Y|A1|🐟
+сестра'|sister|f|сёстры|Y|A1|👧
+звезда'|star|f|звёзды|Y|A2|⭐
+кни'га|book|f|кни'ги|I7|A1|📕
+соба'ка|dog|f|соба'ки|I7|A1|🐶
+ру'чка|pen|f|ру'чки|I7|A1|🖊️
+ко'шка|cat|f|ко'шки|I7|A1|🐱
+подру'га|friend (female)|f|подру'ги|I7|A1|👯
+рука'|hand|f|ру'ки|I7|A1|✋
+нога'|leg|f|но'ги|I7|A1|🦵
+неде'ля|week|f|неде'ли|IS|A1|📅
+ку'хня|kitchen|f|ку'хни|IS|A1|🍳
+семья'|family|f|се'мьи|IS|A1|👪
+дверь|door|f|две'ри|IS|A1|🚪
+тетра'дь|notebook|f|тетра'ди|IS|A1|📓
+крова'ть|bed|f|крова'ти|IS|A1|🛏️
+ночь|night|f|но'чи|IS|A1|🌃
+пе'сня|song|f|пе'сни|IS|A2|🎵
+пло'щадь|square|f|пло'щади|IS|A2|⛲
+ло'шадь|horse|f|ло'шади|IS|A2|🐴
+мышь|mouse|f|мы'ши|IS|A2|🐭
+но'вость|piece of news|f|но'вости|IS|A2|📰
+мать|mother|f|ма'тери|IR|A2|🤱
+дочь|daughter|f|до'чери|IR|A2|👩‍🦰
+о'сень|autumn|f||-|A1|🍂
+соль|salt|f||-|A2|🧂
+окно'|window|n|о'кна|NA|A1|🪟
+сло'во|word|n|слова'|NA|A1|💬
+письмо'|letter|n|пи'сьма|NA|A2|✉️
+о'зеро|lake|n|озёра|NA|A2|🏞️
+де'ло|matter, task|n|дела'|NA|A2|💼
+мо'ре|sea|n|моря'|NE|A1|🌊
+пла'тье|dress|n|пла'тья|NE|A1|👗
+по'ле|field|n|поля'|NE|A2|🌾
+зда'ние|building|n|зда'ния|NE|A2|🏢
+упражне'ние|exercise|n|упражне'ния|NE|A2|🏋️
+и'мя|name|n|имена'|MN|A1|🏷️
+вре'мя|time|n|времена'|MN|A2|⏳
+я'блоко|apple|n|я'блоки|IR|A1|🍎
+де'рево|tree|n|дере'вья|IR|A1|🌳
+у'хо|ear|n|у'ши|IR|A2|👂
+кафе'|café|n|кафе'|SM|A1|🧁
+метро'|metro|n|метро'|SM|A1|🚇
+такси'|taxi|n|такси'|SM|A1|🚕
+кино'|cinema|n|кино'|SM|A1|🎬
+пальто'|coat|n|пальто'|SM|A2|🧥
+молоко'|milk|n||-|A1|🥛
+со'лнце|sun|n||-|A1|☀️
+часы'|clock, watch|pl|часы'|PO|A1|⌚
+де'ньги|money|pl|де'ньги|PO|A1|💵
+брю'ки|trousers|pl|брю'ки|PO|A2|👖
+очки'|glasses|pl|очки'|PO|A2|👓
+джи'нсы|jeans|pl|джи'нсы|PO|A2|🧵
+но'жницы|scissors|pl|но'жницы|PO|A2|✂️
+`;
+const RULES = {
+  Y:  {tag:'-ы',       title:'Add -ы',                   text:'Masculine nouns ending in a hard consonant add -ы. Nouns in -а change -а to -ы.', ex:"стол → столы' · ма'ма → ма'мы", bucket:'y', c:'var(--blue)'},
+  I7: {tag:'-и',       title:'-и after the “7 letters”',  text:'After к, г, х, ж, ш, ч, щ always write -и, never -ы.', ex:"кни'га → кни'ги · врач → врачи'", bucket:'i', c:'var(--yellow)'},
+  IS: {tag:'-и',       title:'-й, -ь, -я → -и',           text:'Soft endings -й, -ь and -я all become -и.', ex:"музе'й → музе'и · дверь → две'ри · неде'ля → неде'ли", bucket:'i', c:'var(--yellow)'},
+  NA: {tag:'-о → -а',  title:'Neuter -о → -а',            text:'Neuter nouns in -о change it to -а. The stress often moves!', ex:"окно' → о'кна · сло'во → слова'", bucket:'a', c:'var(--green)'},
+  NE: {tag:'-е → -я',  title:'Neuter -е → -я',            text:'Neuter nouns in -е change it to -я.', ex:"мо'ре → моря' · пла'тье → пла'тья", bucket:'a', c:'var(--green)'},
+  MN: {tag:'-мена',    title:'-мя → -мена',               text:'The few neuter nouns in -мя add -ен-.', ex:"и'мя → имена' · вре'мя → времена'", bucket:'a', c:'var(--green)'},
+  MA: {tag:'-а́',       title:'Masculine with stressed -а́', text:'Some masculine nouns take a stressed -а́ (-я́) instead of -ы. Learn them as a group.', ex:"дом → дома' · го'род → города' · учи'тель → учителя'", bucket:'a', c:'var(--lilac)'},
+  FL: {tag:'о/е ✂',    title:'The vowel drops out',       text:'In some nouns the о or е in the last syllable disappears.', ex:"день → дни · оте'ц → отцы' · пода'рок → пода'рки", bucket:'fl', c:'var(--pink)'},
+  IR: {tag:'!!!',      title:'Irregular',                 text:'These don’t follow a simple rule. Just learn them by heart!', ex:"брат → бра'тья · челове'к → лю'ди · ребёнок → де'ти", bucket:'ir', c:'var(--red)'},
+  SM: {tag:'=',        title:'Never changes',             text:'Borrowed words ending in a vowel (-о, -е, -и, -у) never change.', ex:"кафе' → кафе' · метро' → метро'", bucket:'sm', c:'var(--surface)'},
+  PO: {tag:'only pl.', title:'Plural only',               text:'These nouns exist only in the plural, even for one thing.', ex:"часы' · брю'ки · де'ньги · очки'", bucket:'sm', c:'var(--surface)'}
+};
+const BUCKETS={y:'-ы',i:'-и',a:'-а / -я',fl:'vowel drops out',ir:'irregular',sm:'no change'};
+
+/* ============ BUILD ============ */
+const S=s=>s.replace(/([аеиоуыэюяё])'/gi,'$1́');
+const plain=s=>s.replace(/́/g,'');
+const N = RAW.trim().split('\n').map((l,id)=>{const [w,en,g,pl,r,lvl,e]=l.split('|');return {id,w:S(w),en,g,pl:S(pl),r,lvl,e};});
+Object.values(RULES).forEach(r=>{r.ex=S(r.ex);r.title=S(r.title);});
+const G={m:{ru:'он',en:'masculine',my:'мой',cls:'gm'},f:{ru:S("она'"),en:'feminine',my:S("моя'"),cls:'gf'},n:{ru:S("оно'"),en:'neuter',my:'моё',cls:'gn'},pl:{ru:S("они'"),en:'plural only',my:S("мои'"),cls:'gp'}};
+
+/* why is this noun this gender? */
+function why(n){
+  const w=plain(n.w);
+  if(n.g==='pl')return 'This noun exists only in the plural, so it goes with они́ and мои́.';
+  if(w==='кофе')return 'Ко́фе is the famous exception: it looks neuter but it’s masculine. Мой ко́фе!';
+  if(n.r==='SM')return 'Borrowed words that end in a vowel and never change are neuter.';
+  if(/мя$/.test(w))return 'Nouns ending in -мя are neuter.';
+  if(n.g==='m'&&/[ая]$/.test(w))return 'It ends in -а/-я, but it means a man, so it’s masculine!';
+  if(/ь$/.test(w)){
+    if(n.g==='f'){if(/[жшчщ]ь$/.test(w))return 'After ж, ш, ч, щ, a final -ь means feminine.';if(/ость$/.test(w))return 'Nouns in -ость are always feminine.';return 'Ends in -ь: this one is feminine. Learn it with моя́.';}
+    if(/тель$/.test(w))return 'Nouns in -тель (people’s jobs) are masculine.';
+    if(/рь$/.test(w)&&/^(январь|февраль|апрель|сентябрь|октябрь|ноябрь|декабрь)$/.test(w))return 'All months are masculine.';
+    return 'Ends in -ь: this one is masculine. Learn it with мой.';
+  }
+  if(n.g==='m')return /й$/.test(w)?'Ends in -й → masculine.':'Ends in a consonant → masculine.';
+  if(n.g==='f')return 'Ends in -а / -я → feminine.';
+  return 'Ends in -о / -е → neuter.';
+}
+
+/* ============ HELPERS ============ */
+const $=(s,el=document)=>el.querySelector(s);
+const $$=(s,el=document)=>[...el.querySelectorAll(s)];
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=a=>a[Math.random()*a.length|0];
+const norm=s=>plain(s).trim().toLowerCase().replace(/ё/g,'е').replace(/\s+/g,'');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const store={get(k,d){try{const v=localStorage.getItem('gp_'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('gp_'+k,JSON.stringify(v))}catch(e){}}};
+let xp=store.get('xp',0), level=store.get('level','all');
+const pool=()=>N.filter(n=>level==='all'||n.lvl===level);
+const hasPl=n=>n.pl&&n.r!=='PO';
+function addXP(n){xp+=n;store.set('xp',xp);const el=$('#xp');el.textContent='★ '+xp+' XP';el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump');}
+function burst(){
+  const cols=['#fe98c0','#80eb3d','#3dd0eb','#eb583d','#ffe14d'];
+  for(let i=0;i<26;i++){const s=document.createElement('span');s.className='burst';s.textContent=pick(['✦','★','●','✸']);
+    s.style.left=(innerWidth/2)+'px';s.style.top=(innerHeight/2)+'px';s.style.color=pick(cols);
+    s.style.setProperty('--dx',(Math.random()*700-350)+'px');s.style.setProperty('--dy',(Math.random()*600-380)+'px');s.style.setProperty('--r',(Math.random()*720-360)+'deg');
+    document.body.appendChild(s);setTimeout(()=>s.remove(),1400);}
+}
+function resultMsg(r){return S(r>=.9?"Отли'чно!":r>=.7?"Хорошо'!":r>=.4?"Неплохо'!":"Ещё раз!");}
+function results(el,score,total,review,again){
+  const r=score/total;if(r>=.7)burst();addXP(score);
+  el.innerHTML=`<div class="stage stage--pink"><p class="result__msg">${resultMsg(r)}</p><div class="result__big">${score}/${total}</div>
+    ${review.length?`<p><b>Review these:</b></p><div class="review">${review.map(x=>`<div>${x}</div>`).join('')}</div>`:'<p><b>Perfect round!</b></p>'}
+    <div class="actions"><button class="btn btn--ghost" id="again">New round</button></div></div>`;
+  $('#again').onclick=again;
+}
+function mcRound({stage,id,total,make,render}){
+  let i=0,score=0,review=[],qs=make();const n=()=>Math.min(total,qs.length);
+  const next=()=>{
+    $('#'+id+'Score').textContent=`${score} / ${n()}`;$('#'+id+'Fill').style.width=(i/n()*100)+'%';
+    if(i>=n()){results($(stage),score,n(),review,()=>{i=0;score=0;review=[];qs=make();next();});return;}
+    render(qs[i],i,i===n()-1,(ok,rev)=>{if(ok)score++;else if(rev)review.push(rev);$('#'+id+'Score').textContent=`${score} / ${n()}`;},()=>{i++;next();});
+  };
+  next();
+}
+function wireChoices(isRight,onAnswer){
+  $$('.choice').forEach(b=>b.onclick=()=>{
+    if(b.disabled)return;const ok=isRight(b);
+    $$('.choice').forEach(x=>{x.disabled=true;if(isRight(x))x.classList.add('ok');});
+    if(!ok)b.classList.add('bad');
+    onAnswer(ok);$('#nextWrap').style.visibility='visible';$('#nextBtn').focus();
+  });
+}
+const nextBtn=last=>`<div class="actions" id="nextWrap" style="visibility:hidden"><button class="btn btn--green" id="nextBtn">${last?'Results →':'Next →'}</button></div>`;
+const bar=id=>`<div class="game__bar"><div class="progress"><div class="progress__fill" id="${id}Fill"></div></div><span class="score" id="${id}Score"></span></div>`;
+const gBtns=(withPl=true)=>Object.entries(G).filter(([k])=>withPl||k!=='pl').map(([k,g],j)=>`<button class="choice ${g.cls}" data-g="${k}" style="background:var(--gc)">${g.ru}<small style="color:var(--ink)">${j+1} · ${g.en.replace(' only','')}</small></button>`).join('');
+
+/* ============ MODAL ============ */
+function openNoun(n){
+  const R=RULES[n.r];
+  $('#modalBody').innerHTML=`
+    <div class="detail__head ${G[n.g].cls}" style="background:var(--gc)">
+      <span class="detail__e">${n.e}</span><h2 class="detail__ru">${esc(n.w)}</h2><p class="detail__en">${esc(n.en)}</p>
+    </div>
+    <div class="detail__body">
+      <div class="facts">
+        <div class="fact"><span>Gender</span><b>${G[n.g].ru}</b><span>${G[n.g].en}</span></div>
+        <div class="fact"><span>Plural</span><b>${n.pl?esc(n.pl):'—'}</b><span>${R?R.title:'not usually counted'}</span></div>
+      </div>
+      <div class="note">⚖️ ${esc(why(n))}</div>
+      ${R?`<div class="note" style="background:${R.c}">👯 ${esc(R.text)}<br><span class="ru" style="font-weight:800">${R.ex}</span></div>`:''}
+      <div class="example"><p class="label">My …</p><p class="ru">${G[n.g].my} ${esc(n.w)}${hasPl(n)?` · ${G.pl.my} ${esc(n.pl)}`:''}</p></div>
+    </div>`;
+  $('#modal').classList.add('is-open');$('#modal').setAttribute('aria-hidden','false');
+}
+function closeModal(){$('#modal').classList.remove('is-open');$('#modal').setAttribute('aria-hidden','true');}
+$('#modalClose').onclick=closeModal;
+$('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+/* ============ ROUTER ============ */
+let route='home',cleanup=null;const VIEWS={};
+function go(){
+  if(cleanup){cleanup();cleanup=null;}
+  const h=location.hash.slice(1);route=VIEWS[h]?h:'home';
+  $$('.nav__link').forEach(a=>a.classList.toggle('is-active',a.getAttribute('href')==='#'+route));
+  VIEWS[route]($('#view'));scrollTo(0,0);
+}
+addEventListener('hashchange',go);
+function setLevel(l){level=l;store.set('level',l);$$('#levelSeg button').forEach(b=>b.classList.toggle('is-on',b.dataset.l===l));}
+$$('#levelSeg button').forEach(b=>b.onclick=()=>{setLevel(b.dataset.l);go();});
+function shell(el,title,sub,inner){el.innerHTML=S(`<section class="section"><div class="container"><h1 class="heading">${title}</h1><p class="lead">${sub}</p>${inner}</div></section>`);}
+function keyChoices(){const key=e=>{if(e.target.tagName==='INPUT')return;const k=+e.key;if(k>=1&&k<=6){const b=$$('.choice')[k-1];if(b&&!b.disabled)b.click();}else if(e.key==='Enter'){const nb=$('#nextBtn');if(nb&&$('#nextWrap').style.visibility==='visible'){e.preventDefault();nb.click();}}};document.addEventListener('keydown',key);cleanup=()=>document.removeEventListener('keydown',key);}
+
+/* ============ HOME ============ */
+const MODES=[
+  ['gender','⚖️','Gender rules',"Он, она́ or оно́? How to tell from the ending, plus the -ь trap and the exceptions.",'var(--blue)'],
+  ['plural','👯','Plural rules','-ы, -и, -а, -мена, vowels that vanish, irregulars, and nouns that never change.','var(--yellow)'],
+  ['list','📖','Noun list',`${N.length} nouns with their gender, plural and rule. Tap any noun for the explanation.`,'var(--green)'],
+  ['detective','🕵️','Gender detective','See a noun, name its gender. Every answer comes with the rule.','var(--pink)'],
+  ['shelf','🗂️','Sort it','Sort nine nouns onto the он / она́ / оно́ / они́ shelves.','var(--lilac)'],
+  ['soft','🪤','-ь challenge','Masculine or feminine? The trickiest nouns in Russian: день, ночь, дверь, слова́рь…','var(--red)'],
+  ['make','⌨️','Make plurals','Type the plural yourself. Cyrillic keyboard included.','var(--blue)'],
+  ['which','🧩','Which rule?','How does this noun make its plural: -ы, -и, -а, a vanishing vowel, or irregular?','var(--yellow)'],
+  ['onemany','⚡','One or many?','60 seconds: is it singular or plural? Watch for па́па, о́кна and дома́!','var(--green)'],
+  ['memory','🧠','Memory match','Pair every singular with its plural.','var(--pink)']
+];
+VIEWS.home=el=>{
+  const words=shuffle(N.filter(hasPl)).slice(0,14).map(n=>`${n.e} ${n.w} → ${n.pl}`);
+  const track=`<div class="marquee__track" aria-hidden="true">${words.map(w=>`<span>${w}</span><span class="marquee__star">✦</span>`).join('')}</div>`;
+  el.innerHTML=`
+  <section class="hero-wrap"><div class="container"><div class="hero">
+    <div class="hero__media">
+      <div class="hero__avatar ru">он<br>${G.f.ru}<br>${G.n.ru}</div>
+      <span class="hero__sticker2">1 → 2, 3, 4…</span>
+      <span class="hero__sticker">A1 ✦ A2</span>
+    </div>
+    <div>
+      <span class="hero__chip">Boqkova Teach</span>
+      <h1 class="hero__title">gender &amp; plural</h1>
+      <p class="hero__lead">Every Russian noun is <b>он</b>, <b>${G.f.ru}</b> or <b>${G.n.ru}</b>, and you can usually tell from the last letter. Learn the rules, then make plurals like a pro. <span class="ru">${S("Стол — столы', кни'га — кни'ги!")}</span></p>
+      <div class="hero__stats">
+        <span class="chip gm" style="background:var(--gc)">он · masculine</span>
+        <span class="chip gf" style="background:var(--gc)">${G.f.ru} · feminine</span>
+        <span class="chip gn" style="background:var(--gc)">${G.n.ru} · neuter</span>
+        <span class="chip gp" style="background:var(--gc)">${N.length} nouns · 7 games</span>
+      </div>
+      <div class="actions" style="justify-content:flex-start;margin-top:26px">
+        <a class="btn" href="#gender">Gender rules →</a>
+        <a class="btn btn--ghost" href="#plural">Plural rules</a>
+      </div>
+    </div>
+  </div></div></section>
+  <div class="marquee">${track}${track}</div>
+  <section class="section"><div class="container">
+    <h2 class="heading">Pick your workout</h2>
+    <p class="lead">Start with the two rule pages, then play. Use the <b>A1 / A2 / All</b> switch at the top to choose the nouns.</p>
+    <div class="grid">${MODES.map(([h,e,t,s,c],i)=>`
+      <a class="mode" href="#${h}">
+        <div class="mode__banner" style="--c:${c}"><span class="mode__emoji">${e}</span><span class="mode__num">${String(i+1).padStart(2,'0')}</span></div>
+        <div class="mode__body"><h3 class="mode__title">${t}</h3><p class="mode__sum">${s}</p><span class="mode__go">${i<3?'Open':'Play'} →</span></div>
+      </a>`).join('')}
+    </div>
+  </div></section>`;
+};
+
+/* ============ GENDER RULES ============ */
+VIEWS.gender=el=>{
+  const softM=N.filter(n=>n.g==='m'&&/ь$/.test(plain(n.w))),softF=N.filter(n=>n.g==='f'&&/ь$/.test(plain(n.w)));
+  shell(el,'Gender rules',"Every Russian noun has a gender: <b>masculine</b>, <b>feminine</b> or <b>neuter</b>. It’s not about meaning (a table isn’t “male”). In most cases, <b>the last letter tells you</b>.",`
+    <div class="cols3">
+      <div class="gcard gm"><h3>он</h3><div class="en">Masculine</div>
+        <p style="font-weight:600;margin:0">Ends in a <b>consonant</b> or <b>-й</b></p>
+        <div class="end"><span>-б…-щ</span><span>-й</span></div>
+        <p class="ex">мой стол · мой дом · мой музе'й</p></div>
+      <div class="gcard gf"><h3>она'</h3><div class="en">Feminine</div>
+        <p style="font-weight:600;margin:0">Ends in <b>-а</b> or <b>-я</b></p>
+        <div class="end"><span>-а</span><span>-я</span></div>
+        <p class="ex">моя' ма'ма · моя' кни'га · моя' неде'ля</p></div>
+      <div class="gcard gn"><h3>оно'</h3><div class="en">Neuter</div>
+        <p style="font-weight:600;margin:0">Ends in <b>-о</b>, <b>-е</b> or <b>-мя</b></p>
+        <div class="end"><span>-о</span><span>-е</span><span>-мя</span></div>
+        <p class="ex">моё окно' · моё мо'ре · моё и'мя</p></div>
+    </div>
+
+    <h2 class="subhead">⚠️ The -ь trap</h2>
+    <p class="lead" style="margin-bottom:16px">A noun ending in the soft sign <b>-ь</b> can be masculine <b>or</b> feminine. There are a few clues, but mostly: learn each one with мой / моя́.</p>
+    <div class="softgrid">
+      <div class="gm"><h4>он · мой</h4><ul><li><b>-тель</b> (jobs): учи'тель, писа'тель</li><li><b>months</b>: янва'рь, апре'ль, октя'брь…</li><li>and: день, дождь, слова'рь, гость, рубль, медве'дь</li></ul>
+        <div class="chips">${softM.map(n=>`<span>${n.e} ${n.w}</span>`).join('')}</div></div>
+      <div class="gf"><h4>она' · моя'</h4><ul><li><b>-чь, -шь, -жь, -щь</b>: ночь, дочь, мышь</li><li><b>-ость</b>: но'вость, ра'дость</li><li>and: дверь, тетра'дь, крова'ть, пло'щадь, о'сень, соль, мать</li></ul>
+        <div class="chips">${softF.map(n=>`<span>${n.e} ${n.w}</span>`).join('')}</div></div>
+    </div>
+
+    <h2 class="subhead">Exceptions to remember</h2>
+    <div class="callouts">
+      <div class="callout gm"><h4>👨 Men in -а / -я</h4><p>Nouns for men are masculine, even with a “feminine” ending.</p><p class="ru">мой па'па · мой де'душка · мой дя'дя · мой мужчи'на</p></div>
+      <div class="callout gn"><h4>🚕 Borrowed words</h4><p>Foreign words ending in -о, -е, -и, -у are neuter and <b>never change</b>.</p><p class="ru">моё кафе' · моё метро' · моё такси'</p></div>
+      <div class="callout" style="--gc:var(--blue)"><h4>☕ Ко'фе is masculine!</h4><p>It looks neuter, but it’s masculine.</p><p class="ru">мой ко'фе (you may hear моё ко'фе in conversation)</p></div>
+      <div class="callout gp"><h4>👖 Plural-only nouns</h4><p>Some nouns exist only in the plural, even for one thing.</p><p class="ru">мои' часы' · мои' брю'ки · мои' де'ньги</p></div>
+    </div>
+
+    <h2 class="subhead">Why gender matters</h2>
+    <div class="table-wrap ltable" style="--gc:var(--yellow)"><table>
+      <tr><th></th><th>он</th><th>она'</th><th>оно'</th><th>они' (plural)</th></tr>
+      <tr><td><b>my</b></td><td class="ru">мой</td><td class="ru">моя'</td><td class="ru">моё</td><td class="ru">мои'</td></tr>
+      <tr><td><b>this</b></td><td class="ru">э'тот</td><td class="ru">э'та</td><td class="ru">э'то</td><td class="ru">э'ти</td></tr>
+      <tr><td><b>new</b></td><td class="ru">но'вый</td><td class="ru">но'вая</td><td class="ru">но'вое</td><td class="ru">но'вые</td></tr>
+      <tr><td><b>was</b></td><td class="ru">был</td><td class="ru">была'</td><td class="ru">бы'ло</td><td class="ru">бы'ли</td></tr>
+      <tr><td><b>Where is it?</b></td><td class="ru">Где стол? — Вот он.</td><td class="ru">Где кни'га? — Вот она'.</td><td class="ru">Где окно'? — Вот оно'.</td><td class="ru">Где часы'? — Вот они'.</td></tr>
+    </table></div>
+    <div class="actions" style="margin-top:30px"><a class="btn btn--green" href="#detective">Practise: Gender detective →</a><a class="btn btn--ghost" href="#plural">Next: Plural rules</a></div>`);
+};
+
+/* ============ PLURAL RULES ============ */
+VIEWS.plural=el=>{
+  const card=k=>{const r=RULES[k];return `<div class="prule"><span class="prule__tag" style="--gc:${r.c}">${r.tag}</span><div><h4>${r.title}</h4><p>${r.text}</p><p class="ex">${r.ex}</p></div></div>`;};
+  shell(el,'Plural rules',`The plural (nominative) is the form for “two or more” in the dictionary form: <span class="ru"><b>кни'га → кни'ги</b></span>. Most nouns follow a few simple patterns.`,`
+    <h2 class="subhead">Step 1 · The basics: -ы or -и</h2>
+    <div class="rulelist">${card('Y')}${card('I7')}${card('IS')}</div>
+    <div class="callout" style="--gc:var(--yellow);margin-bottom:44px;text-align:center">
+      <h4>The “7 letters” spelling rule</h4>
+      <p>After these letters, Russian never writes ы: it writes <b>и</b>.</p>
+      <div class="seven">${'кгхжшчщ'.split('').map(c=>`<span>${c}</span>`).join('')}</div>
+      <p class="ru">соба'ка → соба'ки · нож → ножи' · каранда'ш → карандаши'</p>
+    </div>
+    <h2 class="subhead">Step 2 · Neuter nouns: -а or -я</h2>
+    <div class="rulelist">${card('NA')}${card('NE')}${card('MN')}</div>
+    <h2 class="subhead">Step 3 · Special groups</h2>
+    <div class="rulelist">${card('MA')}${card('FL')}${card('IR')}</div>
+    <h2 class="subhead">Step 4 · No change at all</h2>
+    <div class="rulelist">${card('SM')}${card('PO')}</div>
+    <div class="note" style="margin-bottom:36px">🎯 <b>Watch the stress!</b> It often jumps in the plural: <span class="ru"><b>${S("окно' → о'кна")}</b></span>, <span class="ru"><b>${S("рука' → ру'ки")}</b></span>, <span class="ru"><b>${S("сестра' → сёстры")}</b></span>, <span class="ru"><b>${S("мо'ре → моря'")}</b></span>, <span class="ru"><b>${S("го'род → города'")}</b></span>.</div>
+    <div class="actions"><a class="btn btn--green" href="#make">Practise: Make plurals →</a><a class="btn btn--ghost" href="#which">Which rule?</a></div>`);
+};
+
+/* ============ LIST ============ */
+VIEWS.list=el=>{
+  const p=pool();
+  const tbl=g=>{const arr=p.filter(n=>n.g===g);if(!arr.length)return '';
+    return `<h2 class="subhead" style="margin-top:10px">${G[g].ru} · ${G[g].en} <span class="muted" style="font-size:1rem">(${arr.length})</span></h2>
+    <div class="ltable ${G[g].cls}"><table><tr><th></th><th>singular</th><th>plural</th><th>rule</th><th>English</th></tr>
+    ${arr.map(n=>`<tr data-id="${n.id}" style="cursor:pointer"><td>${n.e}</td><td class="ru">${esc(n.w)}</td><td class="ru">${n.pl?esc(n.pl):'—'}</td><td>${RULES[n.r]?`<span class="rtag" style="background:${RULES[n.r].c}">${RULES[n.r].tag}</span>`:'<span class="muted">—</span>'}</td><td>${esc(n.en)}</td></tr>`).join('')}</table></div>`;};
+  shell(el,'Noun list','Tap a row to see why the noun has its gender and how its plural is made.',`${['m','f','n','pl'].map(tbl).join('')}`);
+  $$('tr[data-id]').forEach(r=>r.onclick=()=>openNoun(N[+r.dataset.id]));
+};
+
+/* ============ GENDER DETECTIVE ============ */
+VIEWS.detective=el=>{
+  shell(el,'Gender detective','Look at the ending and decide: он, она́, оно́ or они́? Keys 1–4 work too.',`<div class="game">${bar('gd')}<div id="gdStage"></div></div>`);
+  mcRound({stage:'#gdStage',id:'gd',total:15,make:()=>shuffle(pool()).slice(0,15),render:(n,i,last,answer,next)=>{
+    $('#gdStage').innerHTML=`<div class="stage">
+      <div style="font-size:3rem;line-height:1">${n.e}</div><div class="bigword">${esc(n.w)}</div><p class="gloss">${esc(n.en)}</p>
+      <div class="choices choices--4">${gBtns()}</div><div class="feedback" id="fb"></div>${nextBtn(last)}</div>`;
+    wireChoices(b=>b.dataset.g===n.g,ok=>{answer(ok,`${G[n.g].my} ${esc(n.w)}`);$('#fb').innerHTML=`${ok?S("Ве'рно! "):''}${esc(why(n))}`;});
+    $('#nextBtn').onclick=next;
+  }});
+  keyChoices();
+};
+
+/* ============ SORT IT (shelves) ============ */
+VIEWS.shelf=el=>{
+  shell(el,'Sort it','Tap a noun, then tap the shelf it belongs on. Sort all of them with as few mistakes as possible!',`<div class="game"><div class="game__bar"><span class="score" id="shMis">Mistakes: 0</span><span class="score" id="shLeft" style="background:var(--blue)"></span><button class="btn btn--sm btn--ghost" id="shRe">↻ New words</button></div><div id="shStage"></div><div class="feedback" id="shFb" style="text-align:center"></div></div>`);
+  let words,sel,mis;
+  const start=()=>{
+    const p=pool(),pick4=g=>shuffle(p.filter(n=>n.g===g));
+    words=shuffle([...pick4('m').slice(0,3),...pick4('f').slice(0,3),...pick4('n').slice(0,2),...pick4('pl').slice(0,1)]);sel=null;mis=0;
+    $('#shMis').textContent='Mistakes: 0';$('#shFb').textContent='';
+    $('#shStage').innerHTML=`<div class="shelf" id="shelf">${words.map(n=>`<button class="chipw" data-id="${n.id}">${n.e} ${esc(n.w)}</button>`).join('')}</div>
+      <div class="bins">${Object.entries(G).map(([k,g])=>`<div class="bin ${g.cls}" data-g="${k}"><h4>${g.ru}</h4><small>${g.my} · ${g.en}</small></div>`).join('')}</div>`;
+    upd();
+    $$('.chipw').forEach(c=>c.onclick=()=>{$$('.chipw').forEach(x=>x.classList.remove('sel'));sel=c;c.classList.add('sel');});
+    $$('.bin').forEach(b=>b.onclick=()=>{
+      if(!sel)return;const n=N[+sel.dataset.id];
+      if(n.g===b.dataset.g){b.insertAdjacentHTML('beforeend',`<span class="in">${esc(n.w)}</span>`);sel.remove();sel=null;$('#shFb').innerHTML=esc(why(n));upd();
+        if(!$$('.chipw').length){addXP(Math.max(1,9-mis));burst();$('#shFb').innerHTML=`<b>${S("Молоде'ц!")}</b> All sorted with ${mis} mistake${mis===1?'':'s'}. <button class="btn btn--sm btn--green" id="shAgain" style="margin-left:8px">Again</button>`;$('#shAgain').onclick=start;}}
+      else{mis++;$('#shMis').textContent='Mistakes: '+mis;const s=sel;s.classList.add('bad');setTimeout(()=>s.classList.remove('bad'),400);$('#shFb').innerHTML=`Not ${G[b.dataset.g].ru}. Look at the ending again!`;}
+    });
+  };
+  const upd=()=>$('#shLeft').textContent=`${$$('.chipw').length} left`;
+  $('#shRe').onclick=start;start();
+};
+
+/* ============ -Ь CHALLENGE ============ */
+VIEWS.soft=el=>{
+  shell(el,'-ь challenge','Every noun here ends in <b>-ь</b>. Masculine (мой) or feminine (моя́)? Remember the clues: <b>-тель</b> and months → он; <b>-чь / -шь / -ость</b> → она́.',`<div class="game">${bar('sf')}<div id="sfStage"></div></div>`);
+  const src=N.filter(n=>/ь$/.test(plain(n.w))&&n.g!=='n');
+  mcRound({stage:'#sfStage',id:'sf',total:Math.min(12,src.length),make:()=>shuffle(src).slice(0,12),render:(n,i,last,answer,next)=>{
+    $('#sfStage').innerHTML=`<div class="stage">
+      <div style="font-size:3rem;line-height:1">${n.e}</div><div class="bigword">${esc(n.w)}</div><p class="gloss">${esc(n.en)}</p>
+      <div class="choices">${['m','f'].map((k,j)=>`<button class="choice ${G[k].cls}" data-g="${k}" style="background:var(--gc)">${G[k].my} ${esc(n.w)}<small style="color:var(--ink)">${j+1} · ${G[k].en}</small></button>`).join('')}</div>
+      <div class="feedback" id="fb"></div>${nextBtn(last)}</div>`;
+    wireChoices(b=>b.dataset.g===n.g,ok=>{answer(ok,`${G[n.g].my} ${esc(n.w)}`);$('#fb').innerHTML=esc(why(n));});
+    $('#nextBtn').onclick=next;
+  }});
+  keyChoices();
+};
+
+/* ============ MAKE PLURALS (typing) ============ */
+VIEWS.make=el=>{
+  const KB=['йцукенгшщзхъ','фывапролджэ','ячсмитьбюё'];
+  shell(el,'Make plurals','Type the plural. You don’t need the stress mark, and Е / Ё both count. After each answer you’ll see the rule.',`<div class="game">${bar('mk')}<div id="mkStage"></div></div>`);
+  let qs,i,score,review;
+  const reset=()=>{qs=shuffle(pool().filter(n=>hasPl(n)&&n.r!=='SM')).slice(0,10);i=0;score=0;review=[];};
+  const draw=()=>{
+    $('#mkScore').textContent=`${score} / ${qs.length}`;$('#mkFill').style.width=(i/qs.length*100)+'%';
+    if(i>=qs.length){results($('#mkStage'),score,qs.length,review,()=>{reset();draw();});return;}
+    const n=qs[i];let checked=false,hints=0;
+    $('#mkStage').innerHTML=`<div class="stage">
+      <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap"><span style="font-size:2.6rem">${n.e}</span><span class="bigword">${esc(n.w)}</span><span style="font-family:var(--font-display);font-weight:800;font-size:2rem">→</span><span style="font-size:2.6rem">${n.e}${n.e}</span></div>
+      <p class="gloss">${esc(n.en)} · ${G[n.g].en}</p>
+      <input class="answer" id="mkIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="…" lang="ru">
+      <div class="feedback" id="fb"></div>
+      <div class="actions"><button class="btn btn--ghost btn--sm" id="hint">💡 Hint</button><button class="btn btn--green" id="go">Check ↵</button></div>
+      <div class="kbd">${KB.map((r,ri)=>`<div class="kbd__row">${[...r].map(c=>`<button class="key" data-k="${c}">${c}</button>`).join('')}${ri===2?'<button class="key key--wide" data-k="⌫">⌫</button>':''}</div>`).join('')}</div></div>`;
+    const inp=$('#mkIn');inp.focus();
+    inp.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();$('#go').click();}};
+    $$('.key').forEach(k=>k.onclick=()=>{
+      if(checked)return;const s=inp.selectionStart??inp.value.length,e2=inp.selectionEnd??s;
+      if(k.dataset.k==='⌫'){if(s===e2&&s>0){inp.value=inp.value.slice(0,s-1)+inp.value.slice(e2);inp.setSelectionRange(s-1,s-1);}else{inp.value=inp.value.slice(0,s)+inp.value.slice(e2);inp.setSelectionRange(s,s);}}
+      else{inp.value=inp.value.slice(0,s)+k.dataset.k+inp.value.slice(e2);inp.setSelectionRange(s+1,s+1);}
+      inp.focus();
+    });
+    $('#hint').onclick=()=>{if(checked)return;const p=plain(n.pl);hints=Math.min(hints+1,p.length-1);inp.value=p.slice(0,hints);inp.focus();};
+    $('#go').onclick=()=>{
+      if(checked){i++;draw();return;}
+      if(!inp.value.trim()){inp.focus();return;}
+      checked=true;inp.readOnly=true;const ok=norm(inp.value)===norm(n.pl),R=RULES[n.r];
+      if(ok){score++;inp.classList.add('ok');$('#fb').innerHTML=`${S("Ве'рно!")} ✦ <span class="ru">${esc(n.pl)}</span><br><span class="muted">${esc(R.title)}: ${esc(R.text)}</span>`;}
+      else{review.push(`${esc(n.w)} → <b>${esc(n.pl)}</b> (${esc(R.title)})`);inp.classList.add('bad');$('#fb').innerHTML=`Correct: <span class="ru" style="background:var(--yellow);padding:0 8px;border-radius:6px;border:2px solid var(--ink)">${esc(n.pl)}</span><br><span class="muted">${esc(R.title)}: ${esc(R.text)}</span>`;}
+      $('#go').textContent=i===qs.length-1?'Results →':'Next →';$('#mkScore').textContent=`${score} / ${qs.length}`;
+    };
+  };
+  reset();draw();
+};
+
+/* ============ WHICH RULE? ============ */
+VIEWS.which=el=>{
+  shell(el,'Which rule?','How does this noun make its plural? Think first, then check. The plural is shown after you answer.',`<div class="game">${bar('wr')}<div id="wrStage"></div></div>`);
+  mcRound({stage:'#wrStage',id:'wr',total:12,make:()=>{
+    const p=pool().filter(n=>RULES[n.r]);const by={};p.forEach(n=>(by[RULES[n.r].bucket]=by[RULES[n.r].bucket]||[]).push(n));
+    const out=[];const keys=Object.keys(by);for(let k=0;k<12;k++)out.push(pick(by[keys[k%keys.length]]));return shuffle(out);},
+  render:(n,i,last,answer,next)=>{
+    const R=RULES[n.r];
+    $('#wrStage').innerHTML=`<div class="stage">
+      <div style="font-size:3rem;line-height:1">${n.e}</div><div class="bigword">${esc(n.w)}</div><p class="gloss">${esc(n.en)} → <span class="ru" id="plShow" style="color:var(--ink);font-weight:900">?</span></p>
+      <div class="rulechoices">${Object.entries(BUCKETS).map(([k,t],j)=>`<button class="choice" data-b="${k}" style="font-family:var(--font-display)">${t}<small>${j+1}</small></button>`).join('')}</div>
+      <div class="feedback" id="fb"></div>${nextBtn(last)}</div>`;
+    wireChoices(b=>b.dataset.b===R.bucket,ok=>{answer(ok,`${esc(n.w)} → <b>${esc(n.pl)}</b> · ${BUCKETS[R.bucket]}`);$('#plShow').textContent=n.pl;$('#fb').innerHTML=`<b>${esc(R.title)}.</b> ${esc(R.text)}`;});
+    $('#nextBtn').onclick=next;
+  }});
+  keyChoices();
+};
+
+/* ============ ONE OR MANY? (60s) ============ */
+VIEWS.onemany=el=>{
+  let timer,left,score,streak,best=store.get('omBest',0),cur,running=false;
+  shell(el,'One or many?','60 seconds! Is the word singular (one) or plural (many)? Keyboard: ← one · → many. Beware: па́па ends in -а but is one person; о́кна ends in -а but is many!',`<div class="game"><div id="omStage"></div></div>`);
+  const src=()=>pool().filter(n=>hasPl(n)&&plain(n.pl)!==plain(n.w));
+  const intro=()=>{$('#omStage').innerHTML=`<div class="stage stage--pink"><div class="result__big">60s</div><p class="result__msg">${S("Гото'вы?")}</p><p><b>Best score: ${best}</b></p><div class="actions"><button class="btn btn--green" id="omGo">Start ⚡</button></div></div>`;$('#omGo').onclick=start;};
+  const next=()=>{const n=pick(src()),many=Math.random()<.5;cur={n,many};$('#omWord').textContent=many?n.pl:n.w;$('#omE').textContent=n.e;};
+  const answer=many=>{
+    if(!running)return;const good=many===cur.many,card=$('#omCard');
+    if(good){score++;streak++;}else streak=0;
+    $('#omFb').innerHTML=good?(streak>=5?`🔥 streak ${streak}!`:'✓'):`✗ <span class="ru">${esc(cur.many?cur.n.pl:cur.n.w)}</span> is ${cur.many?`plural (one: ${esc(cur.n.w)})`:`singular (many: ${esc(cur.n.pl)})`}`;
+    card.classList.remove('flash-ok','flash-bad');void card.offsetWidth;card.classList.add(good?'flash-ok':'flash-bad');setTimeout(()=>card.classList.remove('flash-ok','flash-bad'),220);
+    $('#omScore').textContent=score;next();
+  };
+  const start=()=>{
+    left=60;score=0;streak=0;running=true;
+    $('#omStage').innerHTML=`<div class="game__bar"><span class="rush__time" id="omTime">60</span><span class="score">Score: <span id="omScore">0</span></span></div>
+      <div class="progress" style="margin-bottom:8px"><div class="progress__fill" id="omFill" style="width:100%;background:var(--red)"></div></div>
+      <div class="rush__card" id="omCard" style="text-align:center"><div style="font-size:2.4rem" id="omE"></div><div class="bigword" id="omWord"></div></div>
+      <div class="feedback" id="omFb" style="text-align:center"></div>
+      <div class="rush__btns" style="display:flex;gap:16px;justify-content:center"><button class="btn btn--blue" id="omOne" style="font-size:1.3rem;padding:14px 30px">☝️ one</button><button class="btn btn--yellow" id="omMany" style="font-size:1.3rem;padding:14px 30px">many 👐</button></div>`;
+    $('#omOne').onclick=()=>answer(false);$('#omMany').onclick=()=>answer(true);next();
+    timer=setInterval(()=>{left--;$('#omTime').textContent=left;$('#omFill').style.width=(left/60*100)+'%';if(left<=0)end();},1000);
+  };
+  const end=()=>{
+    clearInterval(timer);running=false;addXP(score);const nb=score>best;if(nb){best=score;store.set('omBest',best);burst();}
+    $('#omStage').innerHTML=`<div class="stage stage--pink"><p class="result__msg">${S(nb?"Но'вый реко'рд!":"Вре'мя вы'шло!")}</p><div class="result__big">${score}</div><p><b>correct answers</b> · best ${best}</p><div class="actions"><button class="btn btn--green" id="omGo">Go again ⚡</button></div></div>`;
+    $('#omGo').onclick=start;
+  };
+  const key=e=>{if(!running)return;if(e.key==='ArrowLeft'){e.preventDefault();answer(false);}else if(e.key==='ArrowRight'){e.preventDefault();answer(true);}};
+  document.addEventListener('keydown',key);
+  cleanup=()=>{clearInterval(timer);running=false;document.removeEventListener('keydown',key);};
+  intro();
+};
+
+/* ============ MEMORY (singular ↔ plural) ============ */
+VIEWS.memory=el=>{
+  let cards,open,moves,matched,t0,timer,lock;
+  shell(el,'Memory match','Flip two tiles at a time. Pair each singular (blue) with its plural (yellow).',`
+    <div class="game"><div class="game__bar"><span class="score" id="mmMoves">0 moves</span><span class="score" id="mmTime" style="background:var(--blue)">0:00</span><button class="btn btn--sm btn--ghost" id="mmRe">↻ New board</button></div><div id="mmStage"></div></div>`);
+  const fmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+  const start=()=>{
+    clearInterval(timer);
+    const ns=shuffle(pool().filter(n=>hasPl(n)&&plain(n.pl)!==plain(n.w))).slice(0,8);
+    cards=shuffle(ns.flatMap(n=>[{k:n.id,t:n.w,e:n.e,s:1},{k:n.id,t:n.pl,e:n.e+n.e,s:0}]));
+    open=[];moves=0;matched=0;t0=null;lock=false;
+    $('#mmMoves').textContent='0 moves';$('#mmTime').textContent='0:00';
+    $('#mmStage').innerHTML=`<div class="mem">${cards.map((c,j)=>`<button class="mcard" data-j="${j}" aria-label="Hidden tile"><div class="mcard__inner"><div class="mcard__face mcard__back">✦</div><div class="mcard__face mcard__front ru ${c.s?'sg':'pl'}" style="display:flex;flex-direction:column;gap:4px"><span style="font-size:1.3em">${c.e}</span>${esc(c.t)}</div></div></button>`).join('')}</div>`;
+    $$('.mcard').forEach(b=>b.onclick=()=>flip(b));
+  };
+  const flip=b=>{
+    if(lock||b.classList.contains('up'))return;
+    if(!t0){t0=Date.now();timer=setInterval(()=>$('#mmTime').textContent=fmt(Math.floor((Date.now()-t0)/1000)),500);}
+    b.classList.add('up');open.push(b);
+    if(open.length===2){
+      moves++;$('#mmMoves').textContent=moves+' moves';
+      const [a,d]=open.map(x=>cards[+x.dataset.j]);
+      if(a.k===d.k&&a.s!==d.s){open.forEach(x=>x.classList.add('done'));open=[];matched++;
+        if(matched===cards.length/2){clearInterval(timer);addXP(5);burst();
+          setTimeout(()=>{$('#mmStage').insertAdjacentHTML('beforeend',`<div class="stage stage--pink" style="margin-top:24px"><p class="result__msg">${S("Молоде'ц!")}</p><div class="result__big">${moves}</div><p><b>moves</b> in ${$('#mmTime').textContent}</p><div class="actions"><button class="btn btn--ghost" id="mmAgain">Play again</button></div></div>`);$('#mmAgain').onclick=start;},450);}
+      }else{lock=true;setTimeout(()=>{open.forEach(x=>x.classList.remove('up'));open=[];lock=false;},850);}
+    }
+  };
+  $('#mmRe').onclick=start;cleanup=()=>clearInterval(timer);
+  start();
+};
+
+/* ============ INIT ============ */
+setLevel(level);
+$('#xp').textContent='★ '+xp+' XP';
+$('#footRu').textContent=S("оди'н, два, мно'го!");
+go();
+</script>
+</body>
+</html>
